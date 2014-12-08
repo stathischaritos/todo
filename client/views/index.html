@@ -1,0 +1,23 @@
+<head>
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="/icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script 
+  	type="text/javascript" 
+  	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyVfg_BypsqvMeVJ2ANweIuGXFTqbFKIU&libraries=places">
+  </script>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+
+</head>
+
+<template name="layout">
+  <!--[if lt IE 9]>
+    <p class="browser-warning"><strong><i class="icon-exclamation-sign"></i> Warning</strong> - You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to properly view this website.</p>
+  <![endif]-->
+
+  {{> yield region="header"}}
+   <div class="content" style="padding-top:45px; background-color:#E8E8E8;">
+  	{{> yield}}
+  </div>
+  {{> yield region="footer"}}
+</template>

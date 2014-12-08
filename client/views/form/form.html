@@ -1,0 +1,150 @@
+<template name="add">
+   <div id = "forms_div" class="">
+        {{> main_info}}
+        <div id="timeline_form_div"  style="display: none;">
+            {{> timeline_form}}
+        </div>
+        <div id="geolocation_form_div"  style="display: none;">
+        {{> geolocation_form}}
+        </div>
+        <div id="budget_form_div"  style="display: none;">
+        {{> budget_form}}
+        </div>
+        {{> buttons}}    
+</div>
+
+</template>
+
+
+<template name="main_info">
+   
+    <div class="row" style="padding-left:1%;padding-right:1%;  padding-top:20px; padding-bottom:20px; border-bottom:1px solid #D8D8D8 ; background-color:white; margin:0px;">
+      <!--    <div style="width:100% ;text-align:center;"><label> New Event / Task / Transaction </label>
+          </div>  -->
+        <div class="col-sm-8">
+            <form role="form">
+                <!-- <input id='title' type="text" class="form-control" placeholder="Title">
+                 --><textarea id='comment' class="form-control" rows="4" placeholder="Text"></textarea>
+            </form>
+             <div style="position:absolute ; right:20px ; top:5px; color: #B1B1B1;"><i class= "glyphicon glyphicon-list"></i></div>
+              <div style="position:absolute ; right:40px ; top:5px; color: #B1B1B1;">B</div>
+               <div style="position:absolute ; right:60px ; top:5px; color: #B1B1B1;">H</div>
+        </div>
+    </div>
+</template>
+
+
+<template name="geolocation_form">
+    <div style="height:2px; background-color:#E8E8E8; width:100%; "></div>
+    <div class="row" style="text-align:center; padding-left:5%;padding-right:5%; padding-top:20px; padding-bottom:20px;border-bottom:1px solid #D8D8D8; border-top:1px solid #D8D8D8; background-color:white; margin:0px;">
+        <div class="col-sm-8">
+           <!--  <label> Geolocation </label> -->
+           <!--  <form role="form">
+                <input id='geopoint' type="text" class="form-control" placeholder="Location Search">
+                <div style="width:100%;text-align:center;background-color:white;">
+                <div id="from_suggest" style = "position: absolute;z-index: 100; background-color:white;width:100%;"></div>
+                </div>
+       
+            </form> -->
+             <div id="from_map" style="height: 380px; width:100%;
+                border-radius:10px;"></div>
+        </div>
+    </div>
+   <!--  
+    <div style="height:10px; background-color:#E8E8E8; width:100%; "></div>
+     <div class="row" style="text-align:center; padding-left:1%;padding-right:1%; padding-bottom:20px; border-bottom:1px solid #D8D8D8;padding-top:20px;">
+ <div class="form-group">
+    <label>Geolocation</label>
+    <input id='geopoint' type="text" class="form-control" placeholder="Location Search">
+       
+    <div style="width:100%;text-align:center;background-color:white;">
+        <div id="from_suggest" style = "position: absolute;z-index: 100; background-color:white;width:100%;"></div>
+    </div>
+</div>
+
+<div id="from_map" style="height: 380px; width:100%;
+border-bottom-right-radius:10px;
+border-bottom-left-radius:10px;"></div>
+</div>   -->
+</template>
+
+
+<template name="entities_form">
+
+</template>
+
+
+<template name="timeline_form">
+    <div style="height:2px; background-color:#E8E8E8; width:100%; "></div>
+    <div class="row" style="text-align:center;border-bottom:1px solid #D8D8D8; padding-left:1%;padding-right:1%; padding-top:20px; padding-bottom:20px; border-top:1px solid #D8D8D8;background-color:white; margin:0px;">
+        <div class="col-sm-8">
+            <!-- <label> Time </label> -->
+            <form role="form">
+                <input id='time_start' type="datetime-local" class="form-control">
+                <input id='time_end' type="datetime-local" class="form-control">
+                <label class="radio-inline">
+                  <input type="radio"   name="inlineRadioOptions" id="once" value="once"> once
+                </label>
+                <label class="radio-inline">
+                  <input type="radio"   name="inlineRadioOptions" id="daily" value="daily"> daily
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" id="weekly"  name="inlineRadioOptions" value="weekly"> weekly
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" id="monthly"   name="inlineRadioOptions" value="monthly"> monthly
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" id="yearly"   name="inlineRadioOptions" value="yearly"> yearly
+                </label>
+
+            </form>
+        </div>
+    </div>
+</template>
+
+
+<template name="budget_form">
+ <div style="height:2px; background-color:#E8E8E8; width:100%; "></div>
+    <div class="row" style="text-align:center;border-bottom:1px solid #D8D8D8; padding-left:1%;padding-right:1%; padding-top:20px; padding-bottom:20px; border-top:1px solid #D8D8D8;background-color:white; margin:0px;">
+        <div class="col-sm-8">
+           <!--  <label> Budget </label>  -->
+        <div class="col-sm-8">
+            <form role="form">
+                <input id='spend' type="number" class="form-control" placeholder="Predicted Expense">
+                <input id='gain' type="number" class="form-control" placeholder="Expected Return">
+                 </form>
+        </div>
+    </div>
+</div>
+</template>
+
+
+<template name="buttons">
+
+    <div style="height:2px; background-color:#E8E8E8; width:100%; "></div>
+    <div class="row" style="text-align:center;border-bottom:1px solid #D8D8D8; padding-left:1%;padding-right:1%; padding-top:20px; padding-bottom:20px; border-top:1px solid #D8D8D8;background-color:white; margin:0px;">
+        <div class="col-sm-12">
+            <!-- <label> Add More Info </label>  -->
+        <div class="col-sm-12" style="color:#43C6DB;">
+             <div class="container" style="display:block ; text-align:center ; margin-top:10px;font-size:2em;" >
+       <span id="timeline_form" class= "glyphicon glyphicon-time" style="margin-right:20px;"></span>
+        <span id="geolocation_form" class= "glyphicon glyphicon-globe" style="margin-right:20px; margin-left:7px;"></span>
+ 		<span id="timeline_form" class= "glyphicon glyphicon-bell" style="margin-right:20px;"></span>
+        <span id="timeline_form" class= "glyphicon glyphicon-user" style="margin-right:20px;"></span>
+        <span id="budget_form" class= "glyphicon glyphicon-usd"></span>
+
+
+    </div>
+        </div>
+           <div class="row" style="text-align:center;">
+              <input id="submit" type="button" class="btn btn-default btn-lg" value="Submit" style="width:50%;margin-top:20px; margin-bottom:20px; border-color:#43C6DB; color:#43C6DB ;"/>
+            </div> 
+    </div>
+
+</div>
+<div style="height:3px; background-color:#E8E8E8; width:100%;border-bottom:1px solid #D8D8D8; "></div>
+</template>
+
+
+
